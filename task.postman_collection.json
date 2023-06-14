@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "83ac5c53-8aae-4fde-9a91-0a42be8fb36e",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"New task\",\r\n    \"description\":\"Short description here\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{port_3000}}/api/task",
+					"host": [
+						"{{port_3000}}"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{port_3000}}/api/task/f7d0991c-3351-452f-be53-9eed835e9745",
+					"host": [
+						"{{port_3000}}"
+					],
+					"path": [
+						"api",
+						"task",
+						"f7d0991c-3351-452f-be53-9eed835e9745"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"description here\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{port_3000}}/api/edit-task/f7d0991c-3351-452f-be53-9eed835e9745",
+					"host": [
+						"{{port_3000}}"
+					],
+					"path": [
+						"api",
+						"edit-task",
+						"f7d0991c-3351-452f-be53-9eed835e9745"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{port_3000}}/api/delete/d71d09cc-9b23-416b-914e-13fcc26c297f",
+					"host": [
+						"{{port_3000}}"
+					],
+					"path": [
+						"api",
+						"delete",
+						"d71d09cc-9b23-416b-914e-13fcc26c297f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{port_3000}}/api/tasks",
+					"host": [
+						"{{port_3000}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
